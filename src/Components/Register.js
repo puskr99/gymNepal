@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View ,Button,TextInput,Alert } from 'react-native'
+import { StyleSheet, Text, View ,Button,TextInput,Alert ,Image} from 'react-native'
 import React ,{useState} from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
@@ -58,11 +58,11 @@ const Register = ({navigation}) => {
                     title='Register'
                     />
        <View style={{flexDirection:'row',margin:10}}>  
-      <Text  style ={{ color:'brown',fontSize:17,textAlign:'center',}}> Already have an account? </Text>
+      <Text  style ={{ fontSize:17,textAlign:'center',}}> Dont't have an account? </Text>
       <Text onPress={()=>{
         navigation.navigate('Login')}}
         style ={{color:'blue',fontSize:17,textAlign:'center',textDecorationLine:'underline'}} >Login Here...</Text>
-      </View>  
+      </View>
 
         </View>
     </SafeAreaView>

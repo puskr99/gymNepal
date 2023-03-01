@@ -6,6 +6,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import FontAwesome5Icons from 'react-native-vector-icons/FontAwesome5'
+import { StatusBar } from 'react-native';
 
 import Home from './src/BottomTabScreens/Home'
 import Members from './src/BottomTabScreens/Members'
@@ -13,6 +14,8 @@ import Profile from './src/BottomTabScreens/Profile'
 
 import Register from './src/Components/Register'
 import Login from './src/Components/Login'
+import TestLogin from './src/Components/TestLogin'
+import TestRegister from './src/Components/TestRegister'
 
 
 const Stack = createNativeStackNavigator();
@@ -71,15 +74,15 @@ export default function App() {
 
   return (
     <>
-    { !test 
+    { test 
     ? 
     <BottomTabs />
     :
     <NavigationContainer independent={true}>
     <Stack.Navigator>
-      <Stack.Screen name="Login" component={Login} />
-      <Stack.Screen name="Register" component={Register} />
-      </Stack.Navigator>
+      <Stack.Screen name="Login" component={TestLogin} />
+      <Stack.Screen name="Register" component={TestRegister} />
+    </Stack.Navigator>
     </NavigationContainer>
     }
       </>
